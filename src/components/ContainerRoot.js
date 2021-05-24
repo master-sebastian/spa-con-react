@@ -1,13 +1,16 @@
 import React,  {Fragment} from 'react'
  
 import "./styles/ContainerRoot.css"
+import Header from "./Header"
 
 class ContainerRoot extends React.Component {
     render(){
-        const message = "Bienvenido al componente  ContainerRoot";
         return (
             <Fragment>
-                <h1>Primer componente en react : {message}</h1>
+                <main className="ContainerRoot__content">
+                    <Header />
+                    { this.props.children}
+                </main>
             </Fragment>
         );
     }

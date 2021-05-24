@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './global.css';
-import ContainerRoot from './components/ContainerRoot';
+import Index from './pages/Index';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContainerRoot />
+    <Index />
   </React.StrictMode>,
   document.getElementById('root')
 );

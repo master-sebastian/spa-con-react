@@ -1,0 +1,8 @@
+.ContainerRoot__content{
+    margin: 0px auto;
+    padding: 10px 20px;
+    width: 80%;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 40px;
+}

@@ -1,0 +1,13 @@
+.ItemMenu__content{
+    padding: 20px;
+    display: flex;
+}
+
+.ItemMenu__content a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    padding: auto 10px;
+}
