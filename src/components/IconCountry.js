@@ -3,7 +3,6 @@ import React from 'react'
 import "./styles/IconCountry.css"
 
 export default function IconCountry({iconTheme}){
-    console.log(iconTheme)
     if(iconTheme === undefined){
         iconTheme = ""
     }
