@@ -7,29 +7,19 @@ import FormMessageV2 from "../components/FormMessageV2"
 
 class FormMessagePage extends React.Component {
     
-    constructor(props){
-        super(props)
-        this.notifyMessage = this.notifyMessage.bind(this)
-        this.addChildren = this.addChildren.bind(this)
-    }
-
-    listComponentsChildren = []
-
     state = {
         form: {}
     }
 
-    addChildren(i){
-        this.listComponentsChildren.push(i)
+    constructor(props){
+        super(props)
+        this.notifyMessage = this.notifyMessage.bind(this)
+        this.addChildren = this.addChildren.bind(this)
+        this.listComponentsChildren = []
     }
 
-    notifyMessage(message, itObj){
-        for (let index = 0; index < this.listComponentsChildren.length; index++) {
-            if(this.listComponentsChildren[index].myMessageParent.current !== null){
-                this.listComponentsChildren[index].myMessageParent.current.innerHTML = "El ultimo hermano escribio dijo: "+message
-            }
-        }
-        itObj.myMessageParent.current.innerHTML = message
+    componentDidMount(){
+
     }
     
     render(){
@@ -53,6 +43,31 @@ class FormMessagePage extends React.Component {
                 </ContainerRoot>
             </Fragment>
         );
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        console.log({prevProps:prevProps, prevState:prevState})    
+        console.log({props:this.props, state:this.state})
+        this.timeoutId = setTimeout(()=>{
+            console.log("async")
+        },4000)
+    }
+
+    componentWillUnmount(){
+        clearTimeout(this.timeoutId)
+    }
+
+    addChildren(i){
+        this.listComponentsChildren.push(i)
+    }
+
+    notifyMessage(message, itObj){
+        for (let index = 0; index < this.listComponentsChildren.length; index++) {
+            if(this.listComponentsChildren[index].myMessageParent.current !== null){
+                this.listComponentsChildren[index].myMessageParent.current.innerHTML = "El ultimo hermano escribio dijo: "+message
+            }
+        }
+        itObj.myMessageParent.current.innerHTML = message
     }
 }
 
