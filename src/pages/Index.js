@@ -68,13 +68,18 @@ class Index extends React.Component {
         if(this.state.data.results.length === 0){
             notFound = <h3>No hay datos en la api</h3>
         }
-        console.log(this.props.match.params.messageProps)
         return (
             <Fragment>
                 <ContainerRoot>
                     <div>
                         <h1>Api de rick and morty</h1>
                     </div>
+                    {this.props.match.params.messageProps && (
+                        <>
+                            <hr></hr>
+                            <h2>{this.props.match.params.messageProps}</h2>
+                        </>
+                    )}
                     <hr></hr>
                     {notFound}
                     <ul>
