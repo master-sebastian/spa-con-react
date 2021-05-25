@@ -11,6 +11,7 @@ export default function App() {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Index} />
+                <Route exact path="/title/:messageProps/" component={Index} />
                 <Route exact path="/form" component={FormMessagePage} />
                 <Route path="/404" component={NotFound} />
                 <Redirect from="*" to="/404" />

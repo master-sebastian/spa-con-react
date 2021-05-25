@@ -68,6 +68,7 @@ class Index extends React.Component {
         if(this.state.data.results.length === 0){
             notFound = <h3>No hay datos en la api</h3>
         }
+        console.log(this.props.match.params.messageProps)
         return (
             <Fragment>
                 <ContainerRoot>
