@@ -10,6 +10,9 @@
 .IconCountry__background-slateblue-with-white{
 	background-image:linear-gradient(slateblue 50%, white 50%, white);
 }
+.IconCountry__background-teal-with-white{
+	background-image:linear-gradient(teal 50%, white 50%, white);
+}
 
 .IconCountry__border_radius{
     border-radius: 50px;

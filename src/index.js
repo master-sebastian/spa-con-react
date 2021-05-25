@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './global.css';
-//import Index from './pages/Index';
-import FormMessagePage from './pages/FormMessagePage';
+import App from './components/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FormMessagePage />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
