@@ -5,6 +5,7 @@ import './styles/Header.css'
 
 function Header(){
     return (
+        
         <nav className="Header__content Header__border">
             <ul className="Header__none_point_in_list">
                 <ItemMenu iconTheme={"teal-with-white"} text={"Home"} href={"/"} isRouteLink={true}/>

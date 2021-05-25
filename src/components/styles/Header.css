@@ -1,7 +1,7 @@
 .Header__content{
     background-color: black;
     color: white;
-    padding: 10px 200px;
+    padding: 10px 2rem;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
@@ -13,11 +13,11 @@
 .Header__none_point_in_list{
     list-style:none;
     justify-content: center;
-    padding: auto 200px;
+    padding: auto 2rem;
     display: flex;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1250px) {
     .Header__none_point_in_list{
         display: block;
     }
