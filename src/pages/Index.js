@@ -62,14 +62,20 @@ class Index extends React.Component {
             }
         }
     }
-
+    
     render(){
+        let notFound = <></>;
+        if(this.state.data.results.length === 0){
+            notFound = <h3>No hay datos en la api</h3>
+        }
         return (
             <Fragment>
                 <ContainerRoot>
                     <div>
                         <h1>Api de rick and morty</h1>
                     </div>
+                    <hr></hr>
+                    {notFound}
                     <ul>
                         {
                             this.state.data.results.map(
